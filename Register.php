@@ -9,7 +9,7 @@ if (!(strpos(mb_strtolower($link), 'www.') === false) && strpos(mb_strtolower($l
 }
 
 if (filter_var($link, FILTER_VALIDATE_URL)) {
-    $shortLink = MakeShortLink(10);
+    $shortLink = MakeShortLink(5);
     InsertLink($link, $shortLink);
     echo "Your shorted link: <br>";
     $shortLink = 'http://' . $ServerHost . '/' . $shortLink;
